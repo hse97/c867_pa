@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build all",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-I", "${workspaceFolder}/headers",  // Include headers folder
+                "-fdiagnostics-color=always",
+                "-g",  // Include debugging information
+                // List all your source files here
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/student.cpp",
+                "${workspaceFolder}/src/roster.cpp",
+                // Output executable
+                "-o",
+                "${workspaceFolder}/bin/main"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build all source files."
+        }
+    ]
+}
